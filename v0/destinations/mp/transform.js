@@ -183,6 +183,7 @@ function processIdentifyEvents(message, type, destination) {
   const returnValue = [];
 
   let properties = getTransformedJSON(message, mPIdentifyConfigJson);
+  message.context == message.context || {};
   const { device } = message.context;
   if (device && device.token) {
     let payload;
